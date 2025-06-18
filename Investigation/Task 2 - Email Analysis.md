@@ -54,7 +54,7 @@ Please provide your findings and explanations for the following questions:
 
 ### 1. What is the email address used to send the phishing email?
 
-The email address can be found by accessing the dump.eml file w/ Thunderbird, as shown in the image below.
+The email address can be found by accessing the 'dump.eml' file w/ Thunderbird, as shown in the image below.
 
 ![2025-06-17T15_37_20](https://github.com/user-attachments/assets/c7b5ba93-4af1-4df1-a3e7-39467c7a1823)
 
@@ -80,7 +80,7 @@ Once we do so, we find that the third-party mail relay service is: elasticemail
 
 ### 4. What is the name of the file inside the encrypted attachment?
 
-To find this information, I downloaded the encrypted attachment to the artefacts directory and used the password provided in the dump.eml file to extract the file. 
+To find this information, I downloaded the encrypted attachment to the artefacts directory and used the password provided in 'dump.eml' to extract the file. 
 
 ![image](https://github.com/user-attachments/assets/2788c98c-a595-43a0-8905-f2d7895dc68b)
 
@@ -90,7 +90,7 @@ Once finished, we see that the name of the file is: Invoice_20230103.lnk
 
 ### 5. What is the password of the encrypted attachment?
 
-As previously mentioned, we can find this information in the dump.eml file using Thunderbird. 
+As previously mentioned, we can find this information in the 'dump.eml' file using Thunderbird. 
 
 The answer is: Invoice2023!
 
@@ -98,7 +98,7 @@ The answer is: Invoice2023!
 
 ### 6. Based on the result of the `lnkparse` tool, what is the encoded payload found in the `Command Line Arguments` field?
 
-To find this information, we need to open up the terminal. From there we type the command, lnkparse *file name/destination*, as shown in the image below.
+To find this information, we need to open up the terminal. From there we type the command, lnkparse <file_lnk>, as shown in the image below.
 
 ![image](https://github.com/user-attachments/assets/8d25a237-a0a3-40c3-9a98-3da95f44edd7)
 
