@@ -1,12 +1,12 @@
 # TryHackMe: Boogeyman 1 - Threat Group Analysis Write-up
 
-## 🎯 Room Overview
+## Room Overview
 
 This repository documents my investigation and analysis for the "The Boogeyman" room on TryHackMe. This challenge focuses on a realistic scenario where the primary task is to analyze the **Tactics, Techniques, and Procedures (TTPs)** executed by a simulated threat group. The investigation covers the entire attack lifecycle, from initial access to achieving the group's ultimate objective.
 
 ---
 
-## ☁️ Prerequisites & Recommended Knowledge
+## Prerequisites & Recommended Knowledge
 
 Successfully completing this room requires a foundational understanding of various cybersecurity concepts and tools, often gained from the TryHackMe SOC L1 Pathway. It is highly recommended to have familiarity with the following topics:
 
@@ -19,13 +19,13 @@ Successfully completing this room requires a foundational understanding of vario
 
 ---
 
-## 💻 Investigation Platform & Environment
+## Investigation Platform & Environment
 
 The challenge is conducted within a dedicated virtual machine (VM) provided by TryHackMe, accessible via a split-screen view. This VM is pre-configured with the necessary environment and tools for the investigation.
 
 ---
 
-## 📁 Provided Artifacts for Analysis
+## Provided Artifacts for Analysis
 
 For the investigation, the following key artifacts are provided, simulating real-world forensic evidence:
 
@@ -37,7 +37,7 @@ These files are typically located in the `/home/ubuntu/Desktop/artefacts` direct
 
 ---
 
-## 🛠️ Tools at Disposal
+## Tools at Disposal
 
 The provided VM includes a suite of essential tools to effectively parse and analyze the artifacts:
 
@@ -50,10 +50,10 @@ The provided VM includes a suite of essential tools to effectively parse and ana
 
 ---
 
-## 🚀 Starting the Hunt
+## Starting the Hunt
 
 This repository will detail my step-by-step approach, findings, and solutions as I embark on hunting "The Boogeyman."
 
-## 🤝 Connect
+## Connect
 
 Feel free to connect with me on [LinkedIn](www.linkedin.com/in/ezra-park-779325330) if you have any questions or feedback.
