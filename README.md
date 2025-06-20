@@ -8,7 +8,7 @@ This repository documents my investigation and analysis for the "The Boogeyman" 
 
 ## Prerequisites & Recommended Knowledge
 
-Successfully completing this room requires a foundational understanding of various cybersecurity concepts and tools, often gained from the TryHackMe SOC L1 Pathway. It is highly recommended to have familiarity with the following topics:
+Successfully completing this room requires a foundational understanding of various cybersecurity concepts and tools. It is highly recommended to have familiarity with the following topics:
 
 * **Phishing Analysis Fundamentals:** Understanding phishing techniques and indicators.
 * **Phishing Analysis Tools:** Proficiency with email analysis tools.
@@ -41,11 +41,11 @@ These files are typically located in the `/home/ubuntu/Desktop/artefacts` direct
 
 The provided VM includes a suite of essential tools to effectively parse and analyze the artifacts:
 
-* **Thunderbird:** A free and open-source cross-platform email client, ideal for examining the `dump.eml` file.
+* **Thunderbird:** A free and open-source cross-platform email client, great for examining the `dump.eml` file.
 * **LNKParse3:** A Python package for forensic analysis of binary files with the `.LNK` extension, useful for shortcut file analysis.
-* **Wireshark:** A GUI-based packet analyzer, indispensable for detailed network traffic inspection of the `capture.pcapng`.
-* **Tshark:** The command-line interface (CLI) version of Wireshark, enabling powerful scriptable network analysis.
-* **jq:** A lightweight and flexible command-line JSON processor, perfect for parsing and filtering the `powershell.json` file.
+* **Wireshark:** A GUI-based packet analyzer, allowing for detailed network traffic inspection of the `capture.pcapng`.
+* **Tshark:** The command-line interface (CLI) version of Wireshark, enabling scriptable network analysis.
+* **jq:** A lightweight and flexible command-line JSON processor, for parsing and filtering the `powershell.json` file.
 * **Built-in Command-Line Tools:** Standard Linux utilities such as `grep` (for pattern matching), `sed` (for stream editing), `awk` (for text processing), and `base64` (for encoding/decoding data) are also available and crucial for efficient data manipulation.
 
 ---
