@@ -23,12 +23,12 @@ We will continue our analysis by searching the `powershell.json` logs for the ex
 
 | **Command Description** | **`jq` Command Example** |
 | :-------------------------------------------------------- | :----------------------------------------------------- |
-| Parse all JSON into beautified output                     | `cat powershell.json | jq`                                   |
-| Print all values from a specific field (without field name)| `cat powershell.json | jq '.FieldName'`                       |
-| Print all values from a specific field (with field name)  | `cat powershell.json | jq '{FieldName}'`                     |
-| Print values from multiple fields                         | `cat powershell.json | jq '{Field1, Field2}'`                |
-| Sort logs based on their Timestamp                        | `cat powershell.json | jq -s -c 'sort_by(.Timestamp) | .[]'` |
-| Sort logs based on Timestamp and print multiple fields    | `cat powershell.json | jq -s -c 'sort_by(.Timestamp) | .[] | {Field1, Field2}'` |
+| Parse all JSON into beautified output                     | `cat powershell.json \| jq`                                   |
+| Print all values from a specific field (without field name)| `cat powershell.json \| jq '.FieldName'`                       |
+| Print all values from a specific field (with field name)  | `cat powershell.json \| jq '{FieldName}'`                     |
+| Print values from multiple fields                         | `cat powershell.json \| jq '{Field1, Field2}'`                |
+| Sort logs based on their Timestamp                        | `cat powershell.json \| jq -s -c 'sort_by(.Timestamp) \| .[]'` |
+| Sort logs based on Timestamp and print multiple fields    | `cat powershell.json \| jq -s -c 'sort_by(.Timestamp) \| .[] \| {Field1, Field2}'` |
 
 You may continue learning this tool via its [official documentation](https://stedolan.github.io/jq/manual/).
 
