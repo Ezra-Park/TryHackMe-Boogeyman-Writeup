@@ -126,11 +126,8 @@ As a note, the link above has been defanged. This also applies for the links in 
 
 **Putting it together:**
 
-The command:
+The command: Creates a web client, downloads code from the internet, and executes that code in memory.
 
-Creates a web client, downloads code from the internet, and executes that code in memory.
-
-Why This Is Dangerous:
-This is a classic technique used in malware and remote code execution. The code at the external URL could do anything: install software, steal data, create backdoors, etc. Since it’s dynamically downloading and executing code, it's hard to detect statically. Often used in PowerShell-based attacks or fileless malware.
+Why This Is Dangerous: This is a classic technique used in malware and remote code execution. The code at the external URL could do anything: install software, steal data, create backdoors, etc. Since it’s dynamically downloading and executing code, it's hard to detect statically. Often used in PowerShell-based attacks or fileless malware.
 
 ---
