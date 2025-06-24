@@ -40,7 +40,19 @@ Please provide your findings and explanations for the following questions based 
 
 ### 1. What are the domains used by the attacker for file hosting and C2? Provide the domains in alphabetical order. (e.g. a.domain.com,b.domain.com)
 
-**Your Answer:**
+First, we want to parse through the json file by using the following command
+
+![image](https://github.com/user-attachments/assets/22755e1a-5d62-4289-bd31-eb76516a03bd)
+
+The output gives us
+
+![image](https://github.com/user-attachments/assets/7fa4fa67-7f5f-4f30-a685-d57d4b6714e8)
+
+This is a lot of data! To find our answer with more ease, we should seek to simplify our output by narrowing our fields. In particular, the ScriptBlockText field looks interesting. We can filter the powershell.json file by entering `cat ~/Desktop/artefacts/powershell.json | jq '{ScriptBlockText}'` into the terminal. Scrolling through the output, we find the following
+
+![image](https://github.com/user-attachments/assets/31833ac8-30ca-4629-9a38-b6507627be94)
+
+In this powershell command, we find our two domains & our answer.
 
 ---
 
