@@ -73,6 +73,17 @@ Answer: Seatbelt
 This command shows `sq3.exe` (presumably `.\Music\sq3.exe` if executed from the current working directory) being run. Notably, it's followed by a file path:
 `AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite`
 
+To find the full file path, there are a couple considerations. First, `AppData` is a hidden directory that's usually found under a user's profile directory. In a windows machine, we typically find the following structure `C:\Users\<username>\AppData`. Second, we can use the context clues from previous commands to find the user's profile. 
+
+![image](https://github.com/user-attachments/assets/3901735a-4356-47a8-b3ea-85048c654bf2)
+
+![image](https://github.com/user-attachments/assets/741fc67d-8a1b-4aee-8c9b-bd4232a1979a)
+
+From the highlighted commands above, we can see that the attacker is operating within the `j.westcott` profile.
+
+Together, this allows us to put the full file path together, as `C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite`.
+
+For our answer, we need to include escaped backslashes: `C:\\Users\\j.westcott\\AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite`
 
 
 
