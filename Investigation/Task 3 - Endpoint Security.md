@@ -52,21 +52,29 @@ This is a lot of data! To find our answer with more ease, we should seek to simp
 
 ![image](https://github.com/user-attachments/assets/31833ac8-30ca-4629-9a38-b6507627be94)
 
-In this powershell command, we find our two domains & our answer.
+In this powershell command, we find our two domains & our answer: cdn.bpakcaging.xyz, files.bpakcaging.xyz
 
 ---
 
 ### 2. What is the name of the enumeration tool downloaded by the attacker?
 
-**Your Answer:**
+From we can scroll through our most recent query to find the results.
 
-**Hint:** Look for common reconnaissance tools or unusual executable downloads.
+![image](https://github.com/user-attachments/assets/a77471f3-a677-4d77-aa1c-79484762bb2b)
+
+Answer: Seatbelt
 
 ---
 
 ### 3. What is the file accessed by the attacker using the downloaded `sq3.exe` binary? Provide the full file path with escaped backslashes.
 
-**Your Answer:**
+![image](https://github.com/user-attachments/assets/4b18ea79-ccdb-49d7-8121-d2d7869670cd)
+
+This command shows `sq3.exe` (presumably `.\Music\sq3.exe` if executed from the current working directory) being run. Notably, it's followed by a file path:
+`AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite`
+
+
+
 
 **Hint:** This binary is often used to interact with a specific type of database file.
 
