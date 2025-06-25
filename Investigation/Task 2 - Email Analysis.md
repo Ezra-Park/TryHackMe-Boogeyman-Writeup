@@ -68,6 +68,8 @@ This image can also be used to answer questions 2 & 5.
 
 If we check the recipient of the email, we find that the answer is: julianne.westcott@hotmail.com
 
+---
+
 ### 3. What is the name of the third-party mail relay service used by the attacker based on the `DKIM-Signature` and `List-Unsubscribe` headers?
 
 To find this information with Thunderbird, we need to view the source and find the appropriate headers. 
@@ -107,6 +109,8 @@ Once we execute the command, we can find the answer in the output, as shown in t
 ![image](https://github.com/user-attachments/assets/36778e16-0495-4127-977a-1911b3338083)
 
 The answer is: aQBlAHgAIAAoAG4AZQB3AC0AbwBiAGoAZQBjAHQAIABuAGUAdAAuAHcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAcwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZgBpAGwAZQBzAC4AYgBwAGEAawBjAGEAZwBpAG4AZwAuAHgAeQB6AC8AdQBwAGQAYQB0AGUAJwApAA==
+
+---
 
 ### Analysis
 
