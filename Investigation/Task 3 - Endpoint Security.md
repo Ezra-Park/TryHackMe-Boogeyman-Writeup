@@ -114,7 +114,7 @@ A quick Google search shows the answer: KeePass
 
 Answer: Hex
 
-We can see from this command that data stored in the `$hex` variable is being split into chunks that are 50 characters in length, presumably in hexadecimal format as the variable name would suggest.
+We can see from this command that data stored in the `$hex` variable is being split into chunks that are 50 characters in length. Each chunk is then used as a subdomain in a DNS query using the nslookup tool (Answer to Q8). This suggests that the data in the file is stored in an encoded format that is suitable for use in DNS subdomains, as DNS subdomains typically have restrictions on the usage of characters. This bit of evidence along with the variable name give strong indications that the data is encoded in hexidecimal or a similar format. 
 
 ---
 
@@ -124,6 +124,8 @@ We can see from this command that data stored in the `$hex` variable is being sp
 
 Answer: nslookup
 
-Continuing from Q7, the 50 character chunks (`$line`) are 
+See explanation from Q7.
 
 ---
+
+
