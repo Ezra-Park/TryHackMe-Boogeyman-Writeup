@@ -114,7 +114,7 @@ A quick Google search shows the answer: KeePass
 
 Answer: Hex
 
-We can see from this command that data stored in the `$hex` variable is being split into segments that are 50 characters in length, presumably in hexadecimal format as the variable name would suggest.
+We can see from this command that data stored in the `$hex` variable is being split into chunks that are 50 characters in length, presumably in hexadecimal format as the variable name would suggest.
 
 ---
 
@@ -124,6 +124,6 @@ We can see from this command that data stored in the `$hex` variable is being sp
 
 Answer: nslookup
 
-
+Continuing from Q7, the 50 character chunks (`$line`) are 
 
 ---
