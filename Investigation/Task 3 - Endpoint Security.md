@@ -90,30 +90,40 @@ For our answer, we need to include escaped backslashes: `C:\\Users\\j.westcott\\
 
 ### 4. What is the software that uses the file in Q3?
 
-**Your Answer:**
+The taking a look at the first photo in Q3 gives us the answer: Microsoft Sticky Notes
 
 ---
 
 ### 5. What is the name of the exfiltrated file?
 
-**Your Answer:**
+![image](https://github.com/user-attachments/assets/d8a1516a-5947-45f3-9359-a547b683c548)
+
+Answer: protected_data.kdbx
 
 ---
 
 ### 6. What type of file uses the `.kdbx` file extension?
 
-**Your Answer:**
+A quick Google search shows the answer: KeePass
 
 ---
 
 ### 7. What is the encoding used during the exfiltration attempt of the sensitive file?
 
-**Your Answer:**
+![image](https://github.com/user-attachments/assets/65d99a39-4759-4ad8-8776-1d27c4785df4)
+
+Answer: Hex
+
+We can see from this command that data stored in the `$hex` variable is being split into segments that are 50 characters in length, presumably in hexadecimal format as the variable name would suggest.
 
 ---
 
 ### 8. What is the tool used for exfiltration?
 
-**Your Answer:**
+![image](https://github.com/user-attachments/assets/5375f840-8a84-4772-adb0-60517119331f)
+
+Answer: nslookup
+
+
 
 ---
