@@ -51,12 +51,8 @@ The output gives us
 This is a lot of data! To find our answer with more ease, we should seek to simplify our output by narrowing our fields. In particular, the ScriptBlockText field looks interesting. We can filter the powershell.json file by entering `cat ~/Desktop/artefacts/powershell.json | jq '{ScriptBlockText}'` into the terminal. Scrolling through the output, we find the following
 
 ![image](https://github.com/user-attachments/assets/6b728b51-6780-4930-9149-82f8c23c6fcd)
-![image](https://github.com/user-attachments/assets/6b728b51-6780-4930-9149-82f8c23c6fcd)
 
-
-
-
-In this command, we find our two domains & our answer: cdn.bpakcaging.xyz, files.bpakcaging.xyz
+In these commands, we find our two domains & our answer: cdn.bpakcaging.xyz, files.bpakcaging.xyz
 
 ---
 
