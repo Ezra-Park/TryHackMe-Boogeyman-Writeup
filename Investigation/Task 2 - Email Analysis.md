@@ -56,7 +56,8 @@ Please provide your findings and explanations for the following questions:
 
 The email address can be found by accessing the `dump.eml` file w/ Thunderbird, as shown in the image below.
 
-![2025-06-17T15_37_20](https://github.com/user-attachments/assets/c7b5ba93-4af1-4df1-a3e7-39467c7a1823)
+![image](https://github.com/user-attachments/assets/4156f9e0-aeed-4c5c-b239-f065b6f4f2d1)
+
 
 We see that the answer is: agriffin@bpakcaging.xyz
 
