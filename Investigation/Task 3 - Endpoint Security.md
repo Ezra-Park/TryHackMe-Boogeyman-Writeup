@@ -52,7 +52,7 @@ This is a lot of data! To find our answer with more ease, we should seek to simp
 
 ![image](https://github.com/user-attachments/assets/31833ac8-30ca-4629-9a38-b6507627be94)
 
-In this powershell command, we find our two domains & our answer: cdn.bpakcaging.xyz, files.bpakcaging.xyz
+In this command, we find our two domains & our answer: cdn.bpakcaging.xyz, files.bpakcaging.xyz
 
 ---
 
@@ -81,7 +81,7 @@ To find the full file path, there are a couple considerations. First, `AppData` 
 
 From the highlighted commands above, we can see that the attacker is operating within the `j.westcott` profile.
 
-Together, this allows us to put the full file path together, as `C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite`.
+Together, this allows us to put the full file path together, as `C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite`
 
 For our answer, we need to include escaped backslashes: `C:\\Users\\j.westcott\\AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite`
 
