@@ -39,7 +39,7 @@ Please provide your findings and explanations for the following questions based 
 
 ### 2. What HTTP method is used by the C2 for the output of the commands executed by the attacker?
 
-From the `powershell.json log`, we know that the attacker was using `Invoke-Request` to transmit the command's results. When we look closer, we can see that the HTTP Method is explicitly defined.
+From the `powershell.json` log, we know that the attacker was using `Invoke-Request` to transmit the command's results. When we look closer, we can see that the HTTP Method is explicitly defined.
 
 ![image](https://github.com/user-attachments/assets/b9d19314-55ed-4d4f-bdb5-c61b7e7ab6c7)
 
