@@ -77,7 +77,8 @@ If we check the recipient of the email, we find that the answer is: julianne.wes
 
 To find this information with Thunderbird, we need to view the source and find the appropriate headers. 
 
-![2025-06-17T15_37_24](https://github.com/user-attachments/assets/c31842ff-77f6-4119-bea3-e11771387754)
+![image](https://github.com/user-attachments/assets/c75c19f5-48f5-4af6-882a-b02593821be8)
+![image](https://github.com/user-attachments/assets/37e95c79-4f18-4bb7-bd76-44128b6f502e)
 
 Once we do so, we find that the third-party mail relay service is: elasticemail
 
