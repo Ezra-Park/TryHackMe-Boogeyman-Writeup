@@ -29,7 +29,9 @@ Please provide your findings and explanations for the following questions based 
 
 ### 1. What software is used by the attacker to host its presumed file/payload server?
 
-**Your Answer:**
+![image](https://github.com/user-attachments/assets/f1f47358-b88a-491a-abf9-cfd47a99e332)
+
+![image](https://github.com/user-attachments/assets/acfa2c29-e79b-468c-a20a-2048ab11c8f1)
 
 **Hint:** Look at the HTTP server headers or banner information related to the file download requests.
 
@@ -37,15 +39,19 @@ Please provide your findings and explanations for the following questions based 
 
 ### 2. What HTTP method is used by the C2 for the output of the commands executed by the attacker?
 
-**Your Answer:**
+From the `powershell.json log`, we know that the attacker was using `Invoke-Request` to transmit the command's results. When we look closer, we can see that the HTTP Method is explicitly defined.
 
-**Hint:** Review the network streams related to the PowerShell C2 communication, specifically where command outputs are sent back.
+![image](https://github.com/user-attachments/assets/b9d19314-55ed-4d4f-bdb5-c61b7e7ab6c7)
+
+Answer: POST
 
 ---
 
 ### 3. What is the protocol used during the exfiltration activity?
 
-**Your Answer:**
+We arrived at this conclusion in Task 3.
+
+Answer: DNS
 
 ---
 
