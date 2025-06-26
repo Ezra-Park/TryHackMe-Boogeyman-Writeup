@@ -67,6 +67,8 @@ This image can also be used to answer questions 2 & 5.
 
 ### 2. What is the email address of the victim?
 
+![image](https://github.com/user-attachments/assets/9de92cd0-24be-4a71-8f27-57a06b5658d9)
+
 If we check the recipient of the email, we find that the answer is: julianne.westcott@hotmail.com
 
 ---
