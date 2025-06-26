@@ -57,7 +57,7 @@ Answer: DNS
 
 ### 4. What is the password of the exfiltrated file?
 
-**Your Answer:**
+Based off the attackers tools and TTPs, we can assume that the password is not located within the file itself. The `protected_data.kdbx` file is a .kdbx file, which is a KeePass database or a single, encrypted container. Instead, the attacker likely obtained the password from the system using `Seatbelt.exe`, their enumeration tool. 
 
 **Hint:** This information might be found within the exfiltrated data itself or revealed through subsequent attacker actions visible in the network traffic.
 
