@@ -70,10 +70,10 @@ Answer: Seatbelt
 
 ![image](https://github.com/user-attachments/assets/4b18ea79-ccdb-49d7-8121-d2d7869670cd)
 
-This command shows `sq3.exe` (presumably `.\Music\sq3.exe` if executed from the current working directory) being run. Notably, it's followed by a file path:
+This command shows `sq3.exe` (presumably `.\Music\sq3.exe` if executed from the current working directory) being run. Of note, it's followed by a file path:
 `AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite`
 
-To find the full file path, there are a couple considerations. First, `AppData` is a hidden directory that's usually found under a user's profile directory. In a Windows machine, we typically find the following structure `C:\Users\<username>\AppData`. Second, we can use the context clues from previous commands to find the user's profile. 
+To find the full file path, there are a couple considerations. First, `AppData` is a hidden directory that's usually found under a user's profile directory. In a Windows machine, we typically find the following structure `C:\Users\<username>\AppData`. Second, we can use the context clues from the `powershell.json` file to find the user's profile. 
 
 ![image](https://github.com/user-attachments/assets/3901735a-4356-47a8-b3ea-85048c654bf2)
 
