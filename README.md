@@ -56,4 +56,4 @@ This repository will detail my step-by-step approach, findings, and solutions as
 
 ## Connect
 
-Feel free to connect with me on [LinkedIn](www.linkedin.com/in/ezra-park-779325330) if you have any questions or feedback.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezra-park-779325330) if you have any questions or feedback.
