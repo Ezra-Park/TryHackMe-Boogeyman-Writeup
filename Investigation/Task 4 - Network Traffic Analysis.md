@@ -93,7 +93,7 @@ We can see the password in the decoded response: %p9^3!lL^Mz47E2GaT^y
 
 ### 5. What is the credit card number stored inside the exfiltrated file?
 
-We know that protected_data.kdbx is being extruded via DNS exfiltration. After tampering with some WireShark filters to remove copies and extraneous packets, we can finally see the data. 
+We know that `protected_data.kdbx` is being extruded via DNS exfiltration. After tampering with some WireShark filters to remove copies and extraneous packets, we can finally see the data. 
 
 ![image](https://github.com/user-attachments/assets/3ca8e48c-3205-422c-a821-13d0dcc4f205)
 
@@ -103,7 +103,7 @@ There are a couple ways to transfer this data to a file. To work with efficiency
 
 Our TShark command will be `tshark -r ./Desktop/artefacts/capture.pcapng -Y 'dns and dns.flags.response == 0 and dns.qry.name contains "bpakcaging.xyz" and ip.dst == 167.71.211.113 and !dns.qry.name contains "eu-west-1"' -T fields -e dns.qry.name | sed 's/\.bpakcaging\.xyz$//' > hex_strings_only.txt`.
 
-The first part will filter the pcapng file so we get the same output as the wireshark query above. The second part is a substitution command. 
+The first part will filter the `capture.pcapng` file so we get the same output as the wireshark query above. The second part is a substitution command. 
 
 -The `sed` command is used for searching and replacing string characters.
 
@@ -118,7 +118,6 @@ The first part will filter the pcapng file so we get the same output as the wire
 The final part of the filter saves the output (which will be the hex encoded version of the `protected_data.kbdx` file) into a new text document. 
 
 ![image](https://github.com/user-attachments/assets/f7c184b5-013e-46d4-b3ad-bbee42865c7a)
-
 
 Now there should only be 1 step remaining before we can access the file, which is to convert the hex encoded data to plain text. To do so, we can use the following command:
 
@@ -137,6 +136,8 @@ Now there should only be 1 step remaining before we can access the file, which i
 -`> protected_data.kdbx`: The final output of the xxd command (the binary data) is redirected (>) to a new file named protected_data.kdbx.
 
 ![image](https://github.com/user-attachments/assets/d5b9d5c1-bd6a-485e-baa3-19d269906d5e)
+
+All that's left to do is to use the master password we found earlier to decrypt the file and find our answer. 
 
 ![image](https://github.com/user-attachments/assets/d39008ca-e7d7-49bf-966f-c13b86f309e9)
 
