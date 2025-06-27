@@ -69,7 +69,7 @@ Based off the attackers tools and TTPs, we can assume that the password is not l
 
 In this line, we see `sq3.exe`, a CL utility for interacting with SQLite databases, is executed to run against a specific file - a local database file in this case - used by Microsoft Sticky Notes. What follows is a SQL query into the plum.sqlite database, asking to retrieve 100 rows from the NOTE table. It is likely that sensitive information, including passwords, are stored in the NOTE table, meaning it is a prime target for our investigation. 
 
-Applying the filters to WireShark, we get the following.
+Applying the appropriate filter to WireShark, we get the following.
 
 ![image](https://github.com/user-attachments/assets/10dcc992-e90d-46c5-9142-e3b77743f3f7)
 
@@ -133,6 +133,12 @@ Now there should only be 1 step remaining before we can access the file, which i
 -`-p`: Specifies the "plain" hex dump format, which is a continuous string of hex characters without any offsets or other formatting. This is the exact format of our input.
 
 -`> protected_data.kdbx`: The final output of the xxd command (the binary data) is redirected (>) to a new file named protected_data.kdbx.
+
+![image](https://github.com/user-attachments/assets/d5b9d5c1-bd6a-485e-baa3-19d269906d5e)
+
+![image](https://github.com/user-attachments/assets/d39008ca-e7d7-49bf-966f-c13b86f309e9)
+
+![image](https://github.com/user-attachments/assets/087d0bd7-69ab-41d5-a1e7-b13409fbb22d)
 
 
 
