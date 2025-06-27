@@ -71,13 +71,15 @@ In this line, we see `sq3.exe`, a CL utility for interacting with SQLite databas
 
 Applying the appropriate filter to WireShark, we get the following.
 
-![image](https://github.com/user-attachments/assets/10dcc992-e90d-46c5-9142-e3b77743f3f7)
+![image](https://github.com/user-attachments/assets/4d3005e9-dea3-4f12-8cd3-da8a2587f8ef)
 
 Here we see the exact command mentioned earlier. To see the response, we need to follow the stream.
 
 ![image](https://github.com/user-attachments/assets/1af9f756-55a9-4869-ba98-0488e5901809)
 
-Clicking on the next stream, #750, we get the following response.
+![image](https://github.com/user-attachments/assets/d9fa7339-e07f-492f-a95a-c2c4339a6605)
+
+To see the response, we need to click on the next stream (#750).
 
 ![image](https://github.com/user-attachments/assets/38a98c22-deea-45f0-b539-9ae7bab43669)
 
