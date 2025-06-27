@@ -87,7 +87,7 @@ To decode the response, I used cyberchef, a free online tool.
 
 ![image](https://github.com/user-attachments/assets/0298b8f4-cc21-4228-b415-c985578bc238)
 
-Hence, we find the password: %p9^3!lL^Mz47E2GaT^y
+We can see the password in the decoded response: %p9^3!lL^Mz47E2GaT^y
 
 ---
 
