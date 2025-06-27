@@ -143,6 +143,6 @@ All that's left to do is to use the master password we found earlier to decrypt 
 
 ![image](https://github.com/user-attachments/assets/087d0bd7-69ab-41d5-a1e7-b13409fbb22d)
 
-
+Answer: 4024007128269551
 
 ---
