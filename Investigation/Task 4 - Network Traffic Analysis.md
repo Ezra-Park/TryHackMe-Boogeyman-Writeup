@@ -91,8 +91,49 @@ Hence, we find the password: %p9^3!lL^Mz47E2GaT^y
 
 ### 5. What is the credit card number stored inside the exfiltrated file?
 
-**Your Answer:**
+We know that protected_data.kdbx is being extruded via DNS exfiltration. After tampering with some WireShark filters to remove copies and extraneous packets, we can finally see the data. 
 
-**Hint:** You will need to successfully extract and decode the exfiltrated data from the packet capture to find this sensitive information.
+![image](https://github.com/user-attachments/assets/3ca8e48c-3205-422c-a821-13d0dcc4f205)
+
+`dns and dns.flags.response == 0 and dns.qry.name contains "bpakcaging.xyz" and ip.dst == 167.71.211.113 and !dns.qry.name contains "eu-west-1"`
+
+There are a couple ways to transfer this data to a file. To work with efficiency, let's use TShark.
+
+Our TShark command will be `tshark -r ./Desktop/artefacts/capture.pcapng -Y 'dns and dns.flags.response == 0 and dns.qry.name contains "bpakcaging.xyz" and ip.dst == 167.71.211.113 and !dns.qry.name contains "eu-west-1"' -T fields -e dns.qry.name | sed 's/\.bpakcaging\.xyz$//' > hex_strings_only.txt`.
+
+The first part will filter the pcapng file so we get the same output as the wireshark query above. The second part is a substitution command. 
+
+-The `sed` command is used for searching and replacing string characters.
+
+-`s/` is for "substitute"
+
+-`\.bpakcaging\.xyz$` is the regular expression we want to search for. The `\` escapes the periods (so they are treated as literal characters), and `$` anchors the search to the end of the line, ensuring that we only remove the suffix.
+
+-`//` is the replacement string (in this case, nothing).
+
+![image](https://github.com/user-attachments/assets/5f2c9cbb-4b5b-4d23-a8d1-fdd4cc4d679c)
+
+The final part of the filter saves the output (which will be the hex encoded version of the `protected_data.kbdx` file) into a new text document. 
+
+![image](https://github.com/user-attachments/assets/f7c184b5-013e-46d4-b3ad-bbee42865c7a)
+
+
+Now there should only be 1 step remaining before we can access the file, which is to convert the hex encoded data to plain text. To do so, we can use the following command:
+
+`cat hex_strings_only.txt | tr -d '\n' | xxd -r -p > protected_data.kdbx`
+
+-`cat hex_strings_only.txt`: This reads the content our hex file.
+
+-`| tr -d '\n'`: The pipe (`|`) sends the output to the next command. `tr` is a utility for translating characters. The `-d '\n'` part deletes all newline characters (\n), joining all the hex chunks into a continuous string.
+
+-`| xxd -r -p`: The output is piped to `xxd`.
+
+-`-r`: Tells xxd to perform a reverse operation, converting hex back to binary.
+
+-`-p`: Specifies the "plain" hex dump format, which is a continuous string of hex characters without any offsets or other formatting. This is the exact format of our input.
+
+-`> protected_data.kdbx`: The final output of the xxd command (the binary data) is redirected (>) to a new file named protected_data.kdbx.
+
+
 
 ---
